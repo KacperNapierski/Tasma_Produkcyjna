@@ -15,13 +15,13 @@ Predkosc_Kp = 0.01
 Predkosc_Ki = 0.125
 Polozenie_Kp = 60.0
 
-# Wybrowadzenia
+# Wyprowadzenia
 #num_predkosc = [-0.005*Ob, Predkosc_Kp*Kt-Ob, Predkosc_Ki*Kt]
 #den_predkosc = [J_obiektu*0.005, J_obiektu -0.005*Ob, Predkosc_Kp*Kt-Ob, Predkosc_Ki*Kt]
 #G_predkosc=signal.TransferFunction(num_predkosc, den_predkosc)
 
-num=[-0.005*Polozenie_Kp*Ob, Polozenie_Kp*(Kt*Predkosc_Kp-Ob), Predkosc_Ki*Kt]
-den=[0.005*J_obiektu, J_obiektu-0.005*Ob, Predkosc_Kp*Kt-Ob-0.005*Polozenie_Kp*Ob, Predkosc_Ki*Kt+Predkosc_Kp*Kt-Ob*Polozenie_Kp, Predkosc_Ki*Kt]
+num=[-0.005*Polozenie_Kp*Ob, Polozenie_Kp*(Kt*Predkosc_Kp-Ob), Predkosc_Ki*Kt*Polozenie_Kp]
+den=[0.005*J_obiektu, J_obiektu-0.005*Ob, Predkosc_Kp*Kt-Ob-0.005*Polozenie_Kp*Ob, Predkosc_Ki*Kt+Predkosc_Kp*Kt-Ob*Polozenie_Kp, Predkosc_Ki*Kt*Polozenie_Kp]
 Gc = signal.TransferFunction(num, den)
 #Gc= signal.lti(num, den)
 
