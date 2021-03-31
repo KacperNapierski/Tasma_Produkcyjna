@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-#import animaplot as amp
 import numpy as np
 from matplotlib.animation import FuncAnimation
 import time

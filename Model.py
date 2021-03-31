@@ -7,7 +7,7 @@ from scipy import signal
 from scipy import integrate as spi
 from matplotlib import pyplot as plt
 from numpy import min
-#from scipy import linspace
+
 
 
 # Dane katalogowe
