@@ -1,13 +1,10 @@
-import sympy
 import control
 from control import matlab
 import numpy as np
-from sympy.abc import s
 from scipy import signal
 from scipy import integrate as spi
 from matplotlib import pyplot as plt
 from numpy import min
-
 
 
 # Dane katalogowe

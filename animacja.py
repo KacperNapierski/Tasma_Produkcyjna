@@ -3,6 +3,7 @@ import matplotlib.animation as animation
 import numpy as np
 from matplotlib.animation import FuncAnimation
 import time
+import Model as mdl
 
 fig, ax = plt.subplots()
 
@@ -30,7 +31,6 @@ def init():
     return rectangle,
 
 
-
 def animate_y(i):
     if i < 150: 
         rectangle.set_y(-i*0.01+2)
@@ -41,8 +41,11 @@ def animate_y(i):
         rectangle.set_x(i*0.06)
     return rectangle,
 
+
+
 #animacja
 anim1=animation.FuncAnimation(fig, animate_y, 
             init_func=init, frames=300, interval=10,
             blit=True,repeat=True)
+
 plt.show()
