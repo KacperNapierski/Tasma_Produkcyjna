@@ -36,8 +36,13 @@ print(G_polozenia)
 
 
 #step responce
-#t,y=control.step_response(G_polozenia,60)
-t,y=control.step_response(G_predkosci,60)
-plt.plot(t, y)
-plt.grid()
+fig, (ax1, ax2) =plt.subplots(2)
+
+t1,y1=control.step_response(G_polozenia,60)
+t2,y2=control.step_response(G_predkosci,60)
+ax1.plot(t1, y1)
+ax2.plot(t2, y2)
+#plt.grid()
 plt.show()
+#print(len(y))
+

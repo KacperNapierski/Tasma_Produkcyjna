@@ -5,7 +5,6 @@ from matplotlib.animation import FuncAnimation
 import time
 import Model as mdl
 
-
 fig, ax = plt.subplots()
 
 # kształty
@@ -38,12 +37,12 @@ def animate(i):
         print(i)
         i=i%150
         print(i)
-        rectangle.set_x(i*0.06)
-
+        rectangle.set_x(mdl.y1[i]*11)
+        
     return rectangle,
 
 
-
+#fig=plt.figure(figsize)
 #animacja
 anim1=animation.FuncAnimation(fig, animate, 
             init_func=init, frames=300, interval=10,
